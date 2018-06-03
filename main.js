@@ -40,7 +40,7 @@ function writeToDocument(url) {
         var pagination;
 
         if (data.next || data.previous) {
-            pagination = generatePaginationButtons(data.next, data.previous);
+            pagination = generatePaginationButtons(data.next, data.previous);.replace(/|/g,"");
         }
         data = data.results;
         var tableHeaders = getTableHeaders(data[0]);
